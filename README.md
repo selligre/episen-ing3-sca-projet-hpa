@@ -73,7 +73,6 @@ Ouvrez un troisième terminal et lancez le générateur de trafic :
 
 ```Bash
 curl http://127.0.0.1:XXXXX/load
-curl http://127.0.0.1:XXXXX/load
 ```
 
 On peut en lancer plusieurs pour simuler une charge plus importante.
