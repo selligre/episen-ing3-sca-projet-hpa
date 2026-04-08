@@ -70,24 +70,12 @@ minikube service hpa-service --url
 #### Étape C : Simulation de charge
 
 Ouvrez un troisième terminal et lancez le générateur de trafic :
-Ouvrez un second terminal et ouvrez le port de l'application :
-
-```Bash
-minikube service hpa-service --url
-```
-
-#### Étape C : Simulation de charge
-
-Ouvrez un troisième terminal et lancez le générateur de trafic :
 
 ```Bash
 curl http://127.0.0.1:XXXXX/load
 curl http://127.0.0.1:XXXXX/load
 ```
 
-On peut en lancer plusieurs pour simuler une charge plus importante.
-
-#### Étape D : Observation du Scaling
 On peut en lancer plusieurs pour simuler une charge plus importante.
 
 #### Étape D : Observation du Scaling
