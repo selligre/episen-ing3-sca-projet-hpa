@@ -70,11 +70,24 @@ minikube service hpa-service --url
 #### Étape C : Simulation de charge
 
 Ouvrez un troisième terminal et lancez le générateur de trafic :
+Ouvrez un second terminal et ouvrez le port de l'application :
+
+```Bash
+minikube service hpa-service --url
+```
+
+#### Étape C : Simulation de charge
+
+Ouvrez un troisième terminal et lancez le générateur de trafic :
 
 ```Bash
 curl http://127.0.0.1:XXXXX/load
+curl http://127.0.0.1:XXXXX/load
 ```
 
+On peut en lancer plusieurs pour simuler une charge plus importante.
+
+#### Étape D : Observation du Scaling
 On peut en lancer plusieurs pour simuler une charge plus importante.
 
 #### Étape D : Observation du Scaling
@@ -83,6 +96,7 @@ Scale Up : Le CPU dépasse le seuil de 70%. Le nombre de pods passe de 1 à 3 (o
 
 Stabilisation : Le HPA maintient le nombre de pods nécessaire pour stabiliser la charge autour de 70%.
 
+Scale Down : Arrêtez de surcharger le système. Après 5 secondes, le cluster réduit le nombre de pods de 1 (toutes les 5 secondes).
 Scale Down : Arrêtez de surcharger le système. Après 5 secondes, le cluster réduit le nombre de pods de 1 (toutes les 5 secondes).
 
 ### 📊 Analyse des résultats
