@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: hpa-service
 spec:
-  selector:
-    app: hpa-app
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
       targetPort: 5000
-  type: ClusterIP
+  selector:
+    app: hpa-app
