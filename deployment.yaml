@@ -13,12 +13,12 @@ spec:
         app: hpa-app
     spec:
       containers:
-      - name: flask-app
-        image: selligre/projet-hpa:latest
-        ports:
-        - containerPort: 5000
-        resources:
-          requests:
-            cpu: "100m"
-          limits:
-            cpu: "200m"
+        - name: flask-app
+          image: selligre/projet-hpa:latest
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              cpu: "100m"
+            limits:
+              cpu: "200m"
